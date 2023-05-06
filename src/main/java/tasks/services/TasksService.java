@@ -37,11 +37,13 @@ public class TasksService {
     }
 
     public int parseFromStringToSeconds(String stringTime){//hh:MM
-        String[] units = stringTime.split(":");
-        int hours = Integer.parseInt(units[0]);
-        int minutes = Integer.parseInt(units[1]);
-        int result = (hours * DateService.MINUTES_IN_HOUR + minutes) * DateService.SECONDS_IN_MINUTE;
-        return result;
+        if (stringTime.matches("[0-9]{2}:[0-9]{2}")) {
+            String[] units = stringTime.split(":");
+            int hours = Integer.parseInt(units[0]);
+            int minutes = Integer.parseInt(units[1]);
+            return (hours * DateService.MINUTES_IN_HOUR + minutes) * DateService.SECONDS_IN_MINUTE;
+        }
+        return 0;
     }
 
     public Iterable<Task> filterTasks(Date start, Date end){
@@ -50,5 +52,9 @@ public class TasksService {
         //Iterable<Task> filtered = tasks.incoming(start, end);
 
         return filtered;
+    }
+
+    public void addTask(Task collectedFieldsTask) {
+
     }
 }

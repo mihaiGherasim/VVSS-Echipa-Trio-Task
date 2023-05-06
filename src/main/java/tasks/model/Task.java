@@ -1,13 +1,15 @@
 package tasks.model;
 
 import org.apache.log4j.Logger;
-import tasks.services.TaskIO;
+import tasks.persistence.TaskRepository;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Task implements Serializable, Cloneable {
+    private String id;
+    private String description;
     private String title;
     private Date time;
     private Date start;
@@ -15,11 +17,26 @@ public class Task implements Serializable, Cloneable {
     private int interval;
     private boolean active;
 
+    public Task(String description, String title, Date time, Date start, Date end, int interval, boolean active) {
+        this.description = description;
+        this.title = title;
+        this.time = time;
+        this.start = start;
+        this.end = end;
+        this.interval = interval;
+        this.active = active;
+    }
+
     private static final Logger log = Logger.getLogger(Task.class.getName());
     private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
     public static SimpleDateFormat getDateFormat(){
         return sdf;
+    }
+    public  Task(String id, String description, String title, Date time){
+        this(title, time);
+        this.id = id;
+        this.description = description;
     }
     public Task(String title, Date time){
         if (time.getTime() < 0) {
@@ -58,6 +75,10 @@ public class Task implements Serializable, Cloneable {
         return this.active;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
     public void setActive(boolean active){
         this.active = active;
     }
@@ -71,6 +92,10 @@ public class Task implements Serializable, Cloneable {
         this.start = time;
         this.end = time;
         this.interval = 0;
+    }
+
+    public void setDescription(String description){
+        this.description = description;
     }
 
     public Date getStartTime() {
@@ -127,7 +152,7 @@ public class Task implements Serializable, Cloneable {
     }
     public String getFormattedRepeated(){
         if (isRepeated()){
-            String formattedInterval = TaskIO.getFormattedInterval(interval);
+            String formattedInterval = TaskRepository.getFormattedInterval(interval);
             return "Every " + formattedInterval;
         }
         else {

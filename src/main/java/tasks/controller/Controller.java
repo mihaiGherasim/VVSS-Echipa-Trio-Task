@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 import org.apache.log4j.Logger;
 import tasks.model.Task;
 import tasks.services.DateService;
-import tasks.services.TaskIO;
+import tasks.persistence.TaskRepository;
 import tasks.services.TasksService;
 import tasks.view.Main;
 
@@ -36,7 +36,7 @@ public class Controller {
     public static TableView mainTable;
 
     @FXML
-    public  TableView tasks;
+    public  TableView<Task> tasks;
     @FXML
     private TableColumn<Task, String> columnTitle;
     @FXML
@@ -89,7 +89,7 @@ public class Controller {
             editNewStage = new Stage();
             NewEditController.setCurrentStage(editNewStage);
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/new-edit-task.fxml"));
-            Parent root = loader.load();//getClass().getResource("/fxml/new-edit-task.fxml"));
+            Parent root = loader.load();
             NewEditController editCtrl = loader.getController();
             editCtrl.setService(service);
             editCtrl.setTasksList(tasksList);
@@ -108,7 +108,7 @@ public class Controller {
     public void deleteTask(){
         Task toDelete = (Task)tasks.getSelectionModel().getSelectedItem();
         tasksList.remove(toDelete);
-        TaskIO.rewriteFile(tasksList);
+        TaskRepository.rewriteFile(tasksList);
     }
     @FXML
     public void showDetailedInfo(){

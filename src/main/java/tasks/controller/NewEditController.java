@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 import org.apache.log4j.Logger;
 import tasks.model.Task;
 import tasks.services.DateService;
-import tasks.services.TaskIO;
+import tasks.persistence.TaskRepository;
 import tasks.services.TasksService;
 
 import java.io.IOException;
@@ -71,6 +71,10 @@ public class NewEditController {
         this.tasksList =tasksList;
     }
 
+    public ObservableList<Task> getTasksList() {
+        return tasksList;
+    }
+
     public void setService(TasksService service){
         this.service =service;
         this.dateService =new DateService(service);
@@ -82,18 +86,22 @@ public class NewEditController {
                 break;
             case "btnEdit" : initEditWindow("Edit Task");
                 break;
+            default:
+                log.info("Cannot initialize window connected with button with id" + clickedButton.getId());
         }
     }
 
     @FXML
     public void initialize(){
         log.info("new/edit window initializing");
-//        switch (clickedButton.getId()){
-//            case  "btnNew" : initNewWindow("New Task");
-//                break;
-//            case "btnEdit" : initEditWindow("Edit Task");
-//                break;
-//        }
+        switch (clickedButton.getId()){
+            case  "btnNew" : initNewWindow("New Task");
+                break;
+            case "btnEdit" : initEditWindow("Edit Task");
+                break;
+            default:
+                log.info("Cannot initialize window connected with button with id" + clickedButton.getId());
+        }
 
     }
     private void initNewWindow(String title){
@@ -144,21 +152,48 @@ public class NewEditController {
     public void saveChanges(){
         Task collectedFieldsTask = collectFieldsData();
         if (incorrectInputMade) return;
-
-        if (currentTask == null){//no task was chosen -> add button was pressed
-            tasksList.add(collectedFieldsTask);
+        try {
+            this.addTask(collectedFieldsTask);
+            TaskRepository.rewriteFile(tasksList);
         }
-        else {
-            for (int i = 0; i < tasksList.size(); i++){
-                if (currentTask.equals(tasksList.get(i))){
-                    tasksList.set(i,collectedFieldsTask);
-                }
-            }
-            currentTask = null;
+        catch (RuntimeException e){
+            e.printStackTrace();
         }
-        TaskIO.rewriteFile(tasksList);
+//
+//        if (currentTask == null){//no task was chosen -> add button was pressed
+//            tasksList.add(collectedFieldsTask);
+//        }
+//        else {
+//            for (int i = 0; i < tasksList.size(); i++){
+//                if (currentTask.equals(tasksList.get(i))){
+//                    tasksList.set(i,collectedFieldsTask);
+//                }
+//            }
+//            currentTask = null;
+//        }
         Controller.editNewStage.close();
     }
+
+    public void addTask(Task collectedFieldsTask) {
+        collectedFieldsTask.setDescription("Description");
+        if(collectedFieldsTask.getTitle().length() > 0 && collectedFieldsTask.getTitle().length() <= 50){
+            if(collectedFieldsTask.getStartTime().before(collectedFieldsTask.getEndTime()) && collectedFieldsTask.getEndTime().after(new Date())){
+                if(collectedFieldsTask.getDescription().length() > 0) {
+                    tasksList.add(collectedFieldsTask);
+                }
+                else {
+                    throw new RuntimeException("Invalid description!!!");
+                }
+            }
+            else{
+                throw new RuntimeException("Invalid end time!!!");
+            }
+        }
+        else {
+            throw new RuntimeException("Invalid title!!!");
+        }
+    }
+
     @FXML
     public void closeDialogWindow(){
         Controller.editNewStage.close();
