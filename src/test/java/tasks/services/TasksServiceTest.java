@@ -12,7 +12,6 @@ import tasks.model.TasksOperations;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-@ExtendWith(MockitoExtension.class)
 public class TasksServiceTest {
     @Mock
     ArrayTaskList tasks = new ArrayTaskList();
@@ -23,7 +22,7 @@ public class TasksServiceTest {
 
     @BeforeEach
     public void setUp(){
-        //tasks = Mockito.mock(ArrayTaskList.class);
+        tasks = Mockito.mock(ArrayTaskList.class);
         service = new TasksService(tasks);
         task = Mockito.mock(Task.class);
     }
