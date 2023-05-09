@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="NewEditControllerTest" time="0.032" tests="17" errors="0" skipped="1" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="tasks.services.TasksServiceTest" time="0.014" tests="2" errors="2" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -59,23 +59,14 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testAddTaskTC1_BVA" classname="NewEditControllerTest" time="0"/>
-  <testcase name="testAddTaskTC1_ECP" classname="NewEditControllerTest" time="0"/>
-  <testcase name="testAddTaskTC1_ECP[1]" classname="NewEditControllerTest" time="0.001"/>
-  <testcase name="testAddTaskTC1_ECP[2]" classname="NewEditControllerTest" time="0.001"/>
-  <testcase name="testAddTaskTC1_ECP[3]" classname="NewEditControllerTest" time="0.001"/>
-  <testcase name="testAddTaskTC2_BVA" classname="NewEditControllerTest" time="0"/>
-  <testcase name="testAddTaskTC2_ECP" classname="NewEditControllerTest" time="0">
-    <skipped message="public void NewEditControllerTest.testAddTaskTC2_ECP() is @Disabled"/>
+  <testcase name="testAddTask_invalidTask" classname="tasks.services.TasksServiceTest" time="0.011">
+    <error message="Problems setting field tasks annotated with @org.mockito.Mock(name=&quot;&quot;, stubOnly=false, extraInterfaces={}, answer=RETURNS_DEFAULTS, serializable=false)" type="org.mockito.exceptions.base.MockitoException">org.mockito.exceptions.base.MockitoException: Problems setting field tasks annotated with @org.mockito.Mock(name="", stubOnly=false, extraInterfaces={}, answer=RETURNS_DEFAULTS, serializable=false)
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field tasks.model.ArrayTaskList tasks.services.TasksServiceTest.tasks accessible: module tasks does not "opens tasks.services" to unnamed module @7e0b85f9
+</error>
   </testcase>
-  <testcase name="testAddTaskTC3_BVA" classname="NewEditControllerTest" time="0"/>
-  <testcase name="testAddTaskTC3_ECP" classname="NewEditControllerTest" time="0.001"/>
-  <testcase name="testAddTaskTC4_BVA" classname="NewEditControllerTest" time="0.001"/>
-  <testcase name="testAddTaskTC4_ECP" classname="NewEditControllerTest" time="0.001"/>
-  <testcase name="testAddTaskTC5_BVA" classname="NewEditControllerTest" time="0.001"/>
-  <testcase name="testAddTaskTC5_ECP" classname="NewEditControllerTest" time="0.001"/>
-  <testcase name="testAddTaskTC6_BVA" classname="NewEditControllerTest" time="0.001"/>
-  <testcase name="testAddTaskTC6_ECP" classname="NewEditControllerTest" time="0.001"/>
-  <testcase name="testAddTaskTC7_BVA" classname="NewEditControllerTest" time="0.001"/>
-  <testcase name="testAddTaskTC8_BVA" classname="NewEditControllerTest" time="0.001"/>
+  <testcase name="testAddTask_validTask" classname="tasks.services.TasksServiceTest" time="0.002">
+    <error message="Problems setting field tasks annotated with @org.mockito.Mock(name=&quot;&quot;, stubOnly=false, extraInterfaces={}, answer=RETURNS_DEFAULTS, serializable=false)" type="org.mockito.exceptions.base.MockitoException">org.mockito.exceptions.base.MockitoException: Problems setting field tasks annotated with @org.mockito.Mock(name="", stubOnly=false, extraInterfaces={}, answer=RETURNS_DEFAULTS, serializable=false)
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field tasks.model.ArrayTaskList tasks.services.TasksServiceTest.tasks accessible: module tasks does not "opens tasks.services" to unnamed module @7e0b85f9
+</error>
+  </testcase>
 </testsuite>

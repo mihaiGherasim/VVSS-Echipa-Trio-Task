@@ -5,8 +5,6 @@ a
 -src/main/java/tasks/services/DateService.java,b\a\ba27869b1e0ea8fe162ea3b4618a07816f29da05
 >
 data/tasks.txt,c\8\c8717992ac90be128c21fa680a390954dd3ffb86
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 R
 "src/main/java/tasks/view/Main.java,a\4\a4e952c1a4765c6cf9a337826a42d32c3f95db7f
 W

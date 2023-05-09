@@ -174,7 +174,7 @@ public class NewEditController {
     }
 
     public void addTask(Task collectedFieldsTask) {
-        collectedFieldsTask.setDescription("Description");
+        //collectedFieldsTask.setDescription("Description");
         if(collectedFieldsTask.getTitle().length() > 0 && collectedFieldsTask.getTitle().length() <= 50){
             if(collectedFieldsTask.getStartTime().before(collectedFieldsTask.getEndTime()) && collectedFieldsTask.getEndTime().after(new Date())){
                 if(collectedFieldsTask.getDescription().length() > 0) {

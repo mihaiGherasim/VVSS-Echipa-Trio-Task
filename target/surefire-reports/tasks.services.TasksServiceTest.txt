@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: tasks.services.TasksServiceTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.014 s <<< FAILURE! - in tasks.services.TasksServiceTest
+testAddTask_invalidTask  Time elapsed: 0.011 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: Problems setting field tasks annotated with @org.mockito.Mock(name="", stubOnly=false, extraInterfaces={}, answer=RETURNS_DEFAULTS, serializable=false)
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field tasks.model.ArrayTaskList tasks.services.TasksServiceTest.tasks accessible: module tasks does not "opens tasks.services" to unnamed module @7e0b85f9
+
+testAddTask_validTask  Time elapsed: 0.002 s  <<< ERROR!
+org.mockito.exceptions.base.MockitoException: Problems setting field tasks annotated with @org.mockito.Mock(name="", stubOnly=false, extraInterfaces={}, answer=RETURNS_DEFAULTS, serializable=false)
+Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field tasks.model.ArrayTaskList tasks.services.TasksServiceTest.tasks accessible: module tasks does not "opens tasks.services" to unnamed module @7e0b85f9
+
