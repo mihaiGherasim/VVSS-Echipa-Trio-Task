@@ -1,6 +1,7 @@
 tasks\controller\Notificator.class
 tasks\model\ArrayTaskList.class
 tasks\model\LinkedTaskList.class
+tasks\controller\TaskRepository.class
 tasks\view\Main.class
 tasks\controller\NewEditController.class
 tasks\services\DateService.class
@@ -8,8 +9,6 @@ module-info.class
 tasks\controller\Controller.class
 tasks\controller\TaskInfoController.class
 tasks\model\TaskList.class
-tasks\model\ArrayTaskList$1.class
-tasks\model\LinkedTaskList$1.class
 tasks\model\LinkedTaskList$LinkedTaskListIterator.class
 tasks\model\LinkedTaskList$Node.class
 tasks\model\ArrayTaskList$ArrayTaskListIterator.class

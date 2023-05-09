@@ -1,10 +1,8 @@
 package tasks.services;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.junit.jupiter.MockitoExtension;
 import tasks.model.ArrayTaskList;
 import tasks.model.Task;
 import tasks.model.TasksOperations;
@@ -12,7 +10,7 @@ import tasks.model.TasksOperations;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class TasksServiceTest {
+public class TaskServiceTest {
     @Mock
     ArrayTaskList tasks = new ArrayTaskList();
     TasksService service;

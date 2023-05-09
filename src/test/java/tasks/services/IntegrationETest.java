@@ -10,7 +10,7 @@ import java.util.Date;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class IntegrationE {
+public class IntegrationETest {
     private ArrayTaskList taskList;
     private TasksService tasksService;
 
@@ -20,6 +20,7 @@ public class IntegrationE {
         tasksService = new TasksService(taskList);
     }
 
+    //IntegrationE
     @Test
     public void testAddValidTask() {
         Task task = new Task("Description", "CursVVSS", new Date(1680325200000L), new Date(1680325200000L), new Date(1682838000000L), 86400, true);
@@ -29,6 +30,7 @@ public class IntegrationE {
         assertEquals(tasksService.getTasks().getTask(size), task);
     }
 
+    //IntegrationE
     @Test
     public void testAddInvalidTask(){
         Task task = new Task("Description", "", new Date(1680325200000L), new Date(1680325200000L), new Date(1682838000000L), 86400, true);

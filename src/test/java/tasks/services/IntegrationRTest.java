@@ -9,7 +9,7 @@ import tasks.model.Task;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class IntegrationR {
+public class IntegrationRTest {
     private ArrayTaskList taskList;
     private TasksService tasksService;
 

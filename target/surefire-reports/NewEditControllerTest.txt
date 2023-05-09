@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: NewEditControllerTest
 -------------------------------------------------------------------------------
-Tests run: 17, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.046 s - in NewEditControllerTest
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.02 s - in NewEditControllerTest
