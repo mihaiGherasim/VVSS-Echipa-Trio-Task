@@ -131,3 +131,5 @@
 2023-05-09 14:43:56 INFO  TasksOperations:31 - No tasks found!!!
 2023-05-09 14:44:10 ERROR ArrayTaskList:92 - not existing index
 2023-05-09 14:44:10 INFO  TasksOperations:31 - No tasks found!!!
+2023-05-09 16:10:00 ERROR ArrayTaskList:92 - not existing index
+2023-05-09 16:10:01 INFO  TasksOperations:31 - No tasks found!!!
