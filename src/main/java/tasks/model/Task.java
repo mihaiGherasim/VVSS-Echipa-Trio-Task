@@ -1,7 +1,7 @@
 package tasks.model;
 
 import org.apache.log4j.Logger;
-import tasks.persistence.TaskRepository;
+import tasks.controller.TaskRepository;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
@@ -16,6 +16,15 @@ public class Task implements Serializable, Cloneable {
     private Date end;
     private int interval;
     private boolean active;
+
+    public Task(String title){
+        this.title = title;
+        this.time = new Date();
+    }
+
+    public Task(){
+
+    }
 
     public Task(String description, String title, Date time, Date start, Date end, int interval, boolean active) {
         this.description = description;
@@ -203,6 +212,10 @@ public class Task implements Serializable, Cloneable {
         task.start = (Date)this.start.clone();
         task.end = (Date)this.end.clone();
         return task;
+    }
+
+    public void setInterval(int interval) {
+        this.interval = interval;
     }
 }
 

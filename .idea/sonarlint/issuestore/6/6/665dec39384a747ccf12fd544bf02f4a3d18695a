@@ -1,0 +1,11 @@
+
+=
+java:S2885(" Make "sdf" an instance variable.(¸‰ˆí8ÿ¦ó›ó0
+L
+java:S1940")Use the opposite operator ("!=") instead.(‡í€µşÿÿÿÿ8£©ó›ó0
+u
+java:S3776„"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(Î¥­üÿÿÿÿ8ğ©ó›ó0
+v
+java:S2975Ñ"SRemove this "clone" implementation; use a copy constructor or copy factory instead.(®Ç‹¹şÿÿÿÿ8ôªó›ó0
+C
+java:S1068"&Remove this unused "id" private field.(æ¨ç†8Æ«ó›ó0

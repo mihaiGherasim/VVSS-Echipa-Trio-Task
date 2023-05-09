@@ -49,12 +49,17 @@ public class TasksService {
     public Iterable<Task> filterTasks(Date start, Date end){
         TasksOperations tasksOps = new TasksOperations(getObservableList());
         Iterable<Task> filtered = tasksOps.incoming(start,end);
-        //Iterable<Task> filtered = tasks.incoming(start, end);
-
         return filtered;
     }
 
-    public void addTask(Task collectedFieldsTask) {
+    public ArrayTaskList getTasks() {
+        return tasks;
+    }
 
+    public void addTask(Task collectedFieldsTask){
+        if(collectedFieldsTask.getTitle().length() < 5){
+            throw new IllegalArgumentException("Invalid arguments!!!");
+        }
+        tasks.add(collectedFieldsTask);
     }
 }

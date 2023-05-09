@@ -1,20 +1,13 @@
-import com.sun.javafx.collections.ImmutableObservableList;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import tasks.model.ArrayTaskList;
 import tasks.model.Task;
-import tasks.model.TaskList;
 import tasks.model.TasksOperations;
-import tasks.persistence.TaskRepository;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 
 import static org.junit.jupiter.api.Assertions.*;
 

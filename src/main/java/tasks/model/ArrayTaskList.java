@@ -4,6 +4,7 @@ package tasks.model;
 
 import org.apache.log4j.Logger;
 
+import java.io.IOException;
 import java.util.*;
 
 public class ArrayTaskList extends TaskList{
@@ -86,7 +87,7 @@ public class ArrayTaskList extends TaskList{
         return this.numberOfTasks;
     }
     @Override
-    public Task getTask(int index){
+    public Task getTask(int index) {
         if (index < 0 || index > size()-1) {
             log.error("not existing index");
             throw new IndexOutOfBoundsException("Index not found");

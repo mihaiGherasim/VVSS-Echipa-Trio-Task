@@ -10,7 +10,7 @@ import org.apache.log4j.Logger;
 import tasks.controller.Controller;
 import tasks.controller.Notificator;
 import tasks.model.ArrayTaskList;
-import tasks.persistence.TaskRepository;
+import tasks.controller.TaskRepository;
 import tasks.services.TasksService;
 
 import java.io.File;

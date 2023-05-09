@@ -1,0 +1,15 @@
+
+z
+java:S1104"XMake primaryStage a static final constant or non-public and provide accessors if needed.(¢Ñû¦ûÿÿÿÿ8ˆ±ó›ó0
+|
+java:S1104"ZMake savedTasksFile a static final constant or non-public and provide accessors if needed.(ÚÄ±íÿÿÿÿÿ8ˆ±ó›ó0
+T
+java:S1444"2Make this "public static primaryStage" field final(¢Ñû¦ûÿÿÿÿ8‰±ó›ó0
+V
+java:S1444"4Make this "public static savedTasksFile" field final(ÚÄ±íÿÿÿÿÿ8Š±ó›ó0
+]	java:S125"<This block of commented-out lines of code should be removed.(é±¨ãÿÿÿÿÿ8©²ó›ó0
+X	java:S125+"<This block of commented-out lines of code should be removed.(€â³Ö8Ê²ó›ó0
+I
+java:S1602:",Remove useless curly braces around statement(çöÔˆ8õ²ó›ó0
+Q
+java:S1068"/Remove this unused "classLoader" private field.(ý¢°Øþÿÿÿÿ8Ž³ó›ó0

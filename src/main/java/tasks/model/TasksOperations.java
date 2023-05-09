@@ -2,7 +2,6 @@ package tasks.model;
 
 import javafx.collections.ObservableList;
 import org.apache.log4j.Logger;
-import tasks.persistence.TaskRepository;
 
 import java.util.*;
 

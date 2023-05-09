@@ -1,9 +1,6 @@
-import javafx.collections.ObservableList;
 import org.junit.jupiter.api.*;
 import tasks.controller.NewEditController;
-import tasks.model.ArrayTaskList;
 import tasks.model.Task;
-import tasks.model.TaskList;
 
 import java.util.Calendar;
 import java.util.Date;
