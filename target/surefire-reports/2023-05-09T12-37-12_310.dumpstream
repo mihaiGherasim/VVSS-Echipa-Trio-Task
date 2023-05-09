@@ -1,0 +1,24 @@
+# Created at 2023-05-09T12:37:12.738
+WARNING: package TaskTest not in tasks
+
+# Created at 2023-05-09T12:37:12.739
+WARNING: package NewEditControllerTest not in tasks
+
+# Created at 2023-05-09T12:37:12.740
+WARNING: package ArrayTasksListTest not in tasks
+
+# Created at 2023-05-09T12:37:12.740
+WARNING: package TasksOperationsTest not in tasks
+
+# Created at 2023-05-09T12:37:13.033
+May 09, 2023 12:37:13 PM org.junit.jupiter.engine.discovery.MethodSelectorResolver resolve
+
+# Created at 2023-05-09T12:37:13.033
+WARNING: Possible configuration error: method [public void NewEditControllerTest.testAddTaskTC1_ECP()] resulted in multiple TestDescriptors [org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor, org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor]. This is typically the result of annotating a method with multiple competing annotations such as @Test, @RepeatedTest, @ParameterizedTest, @TestFactory, etc.
+
+# Created at 2023-05-09T12:37:13.070
+May 09, 2023 12:37:13 PM org.junit.jupiter.engine.discovery.MethodSelectorResolver resolve
+
+# Created at 2023-05-09T12:37:13.071
+WARNING: Possible configuration error: method [public void NewEditControllerTest.testAddTaskTC1_ECP()] resulted in multiple TestDescriptors [org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor, org.junit.jupiter.engine.descriptor.TestTemplateTestDescriptor]. This is typically the result of annotating a method with multiple competing annotations such as @Test, @RepeatedTest, @ParameterizedTest, @TestFactory, etc.
+

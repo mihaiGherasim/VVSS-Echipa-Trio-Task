@@ -13,8 +13,6 @@ K
 src/test/java/TaskTest.java,7\e\7e25e17b1de3f9a5e3e929e1230a94393adefdec
 ^
 .src/main/java/tasks/model/TasksOperations.java,4\f\4f01b9f8917f794cdf589fb86ab1f8dec2bc64a1
-S
-#src/main/java/tasks/model/Task.java,6\6\665dec39384a747ccf12fd544bf02f4a3d18695a
 ^
 .src/main/java/tasks/controller/Controller.java,e\c\ecf3c385b36af4d118754ee8d9878c48978fcaa9
 _
